@@ -22,6 +22,8 @@ file(GLOB IMGUI_MISC_DEBUGGERS_SRC
 file(GLOB IMGUI_MISC_FONTS_SRC
     "${CMAKE_SOURCE_DIR}/lib/imgui/misc/fonts/*.cpp"
     "${CMAKE_SOURCE_DIR}/lib/imgui/misc/fonts/*.h"
+    "${CMAKE_SOURCE_DIR}/lib/imgui/misc/freetype/*.cpp"
+    "${CMAKE_SOURCE_DIR}/lib/imgui/misc/freetype/*.h"
 )
 
 file(GLOB IMGUI_MISC_SINGLE_FILE_SRC
@@ -57,4 +59,5 @@ endif()
 
 add_library(imgui ${SRC})
 include_directories(${CMAKE_SOURCE_DIR}/lib/glfw/include)
+include_directories(${CMAKE_SOURCE_DIR}/lib/freetype/include)
 target_include_directories(imgui PUBLIC .)
